@@ -168,7 +168,7 @@ class RegisterController extends Controller
         \Session::forget('cd');
 
         // viewを呼び出す
-        return view('auth.register', compact('user', 'cd', 'divs', 'deps', 'pos', 'title', 'css'));
+        return view('Auth.register', compact('user', 'cd', 'divs', 'deps', 'pos', 'title', 'css'));
     }
 
     /**
@@ -226,7 +226,7 @@ class RegisterController extends Controller
         $css = 'usertouroku.css';
 
         // viewを呼び出す
-        return view('auth.confirm', compact('de', 'di', 'po', 'user', 'title', 'css'));
+        return view('Auth.confirm', compact('de', 'di', 'po', 'user', 'title', 'css'));
     }
 
     /**
@@ -258,7 +258,7 @@ class RegisterController extends Controller
         $css = 'usertouroku.css';
 
         // viewを呼び出す
-        return view('auth.register', compact('user', 'cd', 'deps', 'pos', 'divs', 'title', 'css'));
+        return view('Auth.register', compact('user', 'cd', 'deps', 'pos', 'divs', 'title', 'css'));
     }
 
     /**
@@ -275,7 +275,7 @@ class RegisterController extends Controller
         $css = 'usertouroku.css';
 
         // viewを呼び出す
-        return view('auth.complete', compact('tagu', 'css'));
+        return view('Auth.complete', compact('tagu', 'css'));
     }
 
     /**
@@ -308,6 +308,6 @@ class RegisterController extends Controller
         $css = 'user.css';
 
         // viewを呼び出す
-        return view('auth.admin', compact('users', 'tagu', 'title2', 'css'));
+        return view('Auth.admin', compact('users', 'tagu', 'title2', 'css'));
     }
 }

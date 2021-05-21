@@ -231,7 +231,6 @@ class DailyReportController extends Controller
                 } catch (\Throwable $th) {
                     // 登録失敗の場合はロールバックする
                     \DB::rollback();
-                    dd($th);
                     abort(500);
                 }
             } else {
@@ -380,7 +379,6 @@ class DailyReportController extends Controller
                 \DB::commit();
             } catch (\Throwable $th) {
                 \DB::rollback();
-                dd($th);
                 abort(500);
             }
         } else {

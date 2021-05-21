@@ -93,7 +93,6 @@ class RegisterController extends Controller
                     ]);
                     \DB::commit();
                 } catch (\Throwable $e) {
-                    dd($e);
                     // 登録失敗の場合はロールバック
                     \DB::rollback();
                     abort(500);
